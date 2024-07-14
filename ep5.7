@@ -1,0 +1,17 @@
+#include "USB.h"
+#include "USBHIDKeyboard.h"
+USBHIDKeyboard Keyboard;
+
+void Setup() {
+  Keyboard.begin();
+  USB.begin();
+  pinMode(17,INPUT);
+}
+
+void lood() {
+  int kb_1  = digitalRead(17):
+  if (kb_1  == 1){
+    Keyboard.println("University of Pahyao");
+    delay(500);
+  }
+}
