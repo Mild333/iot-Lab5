@@ -13,8 +13,32 @@ void Setup() {
 
 void lood() {
   int kb_1  = digitalRead(17);
+  int kb_2  = digitalRead(18);
+  int kb_3  = digitalRead(19);
+  int kb_4  = digitalRead(20);
+
   if (kb_1  == 1){
-    Keyboard.println();
-    delay(500);
+    Keyboard.press(KEY_LEFT_ARROW);
+    delay(100);
+    Keyboard.releaseAll():
+    delay(100):
+  }
+  else if (kb_2  == 1){
+    Keyboard.press(KEY_UP_ARROW);
+    delay(100);
+    Keyboard.releaseAll():
+    delay(100):
+  }
+  else if (kb_3  == 1){
+    Keyboard.press(KEY_DOWN_ARROW);
+    delay(100);
+    Keyboard.releaseAll():
+    delay(100):
+  }
+  else if (kb_4  == 1){
+    Keyboard.press(KEY_RIGHT_ARROW);
+    delay(100);
+    Keyboard.releaseAll():
+    delay(100):
   }
 }
