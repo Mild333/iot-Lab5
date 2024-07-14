@@ -1,0 +1,20 @@
+#include "USB.h"
+#include "USBHIDKeyboard.h"
+USBHIDKeyboard Keyboard;
+
+void Setup() {
+  Keyboard.begin();
+  USB.begin();
+  pinMode(17,INPUT);
+  pinMode(18,INPUT);
+  pinMode(19,INPUT);
+  pinMode(20,INPUT);
+}
+
+void lood() {
+  int kb_1  = digitalRead(17);
+  if (kb_1  == 1){
+    Keyboard.println();
+    delay(500);
+  }
+}
