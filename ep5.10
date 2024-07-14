@@ -1,1 +1,13 @@
-You have unsaved changes. Do you want to discard them?
+#include "USB.h"
+#include "USBHIDMouse.h"
+USBHIDMouse Mouse;
+
+void setup(){
+  Mouse.begin();
+  USB.begin();
+}
+
+void loop(){
+  Mouse.move(0,0,0,-3000);
+  delay(250);
+}
