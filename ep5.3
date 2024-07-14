@@ -1,0 +1,15 @@
+#include "USB.h"
+#include "USBHIDKeyboard.h"
+USBHIDKeyboard Keyboard;
+
+void Setup() {
+  Keyboard.begin();
+  USB.begin();
+}
+
+void lood() {
+  Keyboard.press('w');
+  delay(100);
+  Keyboard.releaseAll();
+  delay(1000);
+}
